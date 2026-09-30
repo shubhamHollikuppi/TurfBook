@@ -8,6 +8,9 @@ Built using HTML5, CSS3, Vanilla JavaScript, Node.js, Express.js, MongoDB, and M
 
 This project is developed as a B.Tech Computer Science and Engineering academic and portfolio project. It is currently under development, with ongoing improvements to functionality, security, validation, and user experience.
 
+![Uploading homepage.png.png…]()
+
+
 ---
 
 ## 🌟 Key Features
