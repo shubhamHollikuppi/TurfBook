@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Turf — TurfBook Lite</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/owner.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <!-- Global Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <!-- Dynamic Navbar -->
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="form-card">
+      <a href="/owner-dashboard.html" class="btn btn-secondary btn-sm" style="margin-bottom: 20px;">← Back to Dashboard</a>
+      
+      <h1>Add New Turf</h1>
+      <p class="form-card-subtitle">List your sports arena on TurfBook for players to discover and book</p>
+
+      <div id="owner-alert" class="alert alert-error"></div>
+
+      <form id="add-turf-form">
+        <div class="form-group">
+          <label for="name">Turf Name *</label>
+          <input type="text" id="name" class="form-control" placeholder="e.g. Kolhapur Sports Arena" required>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="sport">Sport Type *</label>
+            <select id="sport" class="form-control" required>
+              <option value="Football">Football</option>
+              <option value="Cricket">Cricket</option>
+              <option value="Badminton">Badminton</option>
+              <option value="Basketball">Basketball</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="pricePerHour">Price Per Hour (₹) *</label>
+            <input type="number" id="pricePerHour" class="form-control" placeholder="e.g. 800" min="100" required>
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label for="city">City *</label>
+            <input type="text" id="city" class="form-control" placeholder="e.g. Kolhapur" required>
+          </div>
+
+          <div class="form-group">
+            <label for="area">Area / Locality *</label>
+            <input type="text" id="area" class="form-control" placeholder="e.g. Rajarampuri" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Full Address *</label>
+          <input type="text" id="address" class="form-control" placeholder="e.g. Plot 42, 3rd Lane, Rajarampuri, Kolhapur" required>
+        </div>
+
+        <div class="form-group">
+          <label for="image">Image URL (Optional)</label>
+          <input type="url" id="image" class="form-control" placeholder="https://images.unsplash.com/photo-...">
+        </div>
+
+        <div class="form-group">
+          <label for="description">About This Turf *</label>
+          <textarea id="description" class="form-control" rows="4" placeholder="Describe turf grass quality, suitable match formats, dimensions, etc." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Available Facilities</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="facilities" value="Parking"> Parking
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="facilities" value="Flood Lights"> Flood Lights
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="facilities" value="Changing Room"> Changing Room
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="facilities" value="Drinking Water"> Drinking Water
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="padding: 14px; font-size: 1rem; margin-top: 20px;">
+          Add Turf
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/owner.js"></script>
+</body>
+</html>

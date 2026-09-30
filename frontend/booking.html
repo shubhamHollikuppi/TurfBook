@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirm Booking — TurfBook Lite</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/booking.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <!-- Global Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <!-- Dynamic Navbar -->
+    </div>
+  </header>
+
+  <main class="booking-page-wrapper">
+    <div id="booking-alert" class="alert alert-error"></div>
+
+    <!-- Summary Step -->
+    <div class="booking-summary-card" id="booking-summary-card">
+      <div class="summary-header">
+        <h1>Booking Summary</h1>
+        <p style="color: var(--muted); font-size: 0.9rem; margin-top: 4px;">Please review your game details before confirming</p>
+      </div>
+
+      <div class="summary-list">
+        <div class="summary-item">
+          <span class="summary-label">Turf</span>
+          <span class="summary-value" id="summary-turf">Loading...</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Sport</span>
+          <span class="summary-value" id="summary-sport">-</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Date</span>
+          <span class="summary-value" id="summary-date">-</span>
+        </div>
+        <div class="summary-item">
+          <span class="summary-label">Time Slot</span>
+          <span class="summary-value" id="summary-time">-</span>
+        </div>
+        <div class="summary-item summary-total">
+          <span class="summary-label" style="font-weight: 600; color: var(--dark);">Total Amount</span>
+          <span class="summary-value" id="summary-price">₹0</span>
+        </div>
+      </div>
+
+      <button id="confirm-booking-btn" class="btn btn-primary btn-block" style="padding: 14px; font-size: 1.05rem;">
+        Confirm Booking
+      </button>
+      <a href="javascript:history.back()" class="btn btn-secondary btn-block" style="margin-top: 10px; padding: 10px;">
+        Back to Turf
+      </a>
+    </div>
+
+    <!-- Success Confirmation Step -->
+    <div class="booking-success-card" id="booking-success-card">
+      <div class="success-icon-badge">✓</div>
+      <h2 style="font-size: 1.75rem; color: var(--dark); margin-bottom: 8px;">Booking Confirmed!</h2>
+      <p style="color: var(--muted); margin-bottom: 20px;">Your turf has been successfully booked.</p>
+
+      <div style="background: var(--background); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; margin-bottom: 20px; text-align: left;">
+        <p style="margin-bottom: 6px;"><strong id="success-turf-name">Kolhapur Sports Arena</strong></p>
+        <p style="color: var(--muted); font-size: 0.95rem; margin-bottom: 6px;" id="success-date-time">15 September 2026 (06:00 PM – 07:00 PM)</p>
+        <p style="font-weight: 700; color: var(--primary-dark);" id="success-price">₹800</p>
+      </div>
+
+      <div style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;">
+        Booking Reference ID
+      </div>
+      <div class="booking-id-tag" id="success-booking-id">TB000000</div>
+
+      <div class="success-actions">
+        <a href="/my-bookings.html" class="btn btn-primary btn-sm" style="padding: 12px 24px;">View My Bookings</a>
+        <a href="/turfs.html" class="btn btn-secondary btn-sm" style="padding: 12px 24px;">Back to Turfs</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+      
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/booking.js"></script>
+</body>
+</html>

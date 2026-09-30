@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Turfs — TurfBook Lite</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/turf.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <!-- Global Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <!-- Dynamic Navbar -->
+    </div>
+  </header>
+
+  <main class="container">
+    <div style="margin-top: 32px;">
+      <h1 style="font-size: 2rem; color: var(--dark); margin-bottom: 6px;">Find Your Turf</h1>
+      <p style="color: var(--muted);">Browse verified sports grounds and reserve your preferred match time</p>
+    </div>
+
+    <!-- Filter & Search Controls -->
+    <div class="filter-card">
+      <form id="filter-form" class="filter-grid">
+        <div class="filter-group">
+          <label for="search-input">Search Turf or Location</label>
+          <input type="text" id="search-input" class="form-control" placeholder="Search by name, area, or address...">
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-sport">Sport</label>
+          <select id="filter-sport" class="form-control">
+            <option value="All">All Sports</option>
+            <option value="Football">Football</option>
+            <option value="Cricket">Cricket</option>
+            <option value="Badminton">Badminton</option>
+            <option value="Basketball">Basketball</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-city">City</label>
+          <select id="filter-city" class="form-control">
+            <option value="All">All Cities</option>
+            <option value="Kolhapur">Kolhapur</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-price">Maximum Price</label>
+          <select id="filter-price" class="form-control">
+            <option value="">Any Price</option>
+            <option value="600">Up to ₹600 / hr</option>
+            <option value="800">Up to ₹800 / hr</option>
+            <option value="1000">Up to ₹1000 / hr</option>
+          </select>
+        </div>
+
+        <div class="filter-actions">
+          <button type="submit" class="btn btn-primary btn-sm" style="padding: 10px 18px;">Apply</button>
+          <button type="button" id="clear-filters-btn" class="btn btn-secondary btn-sm" style="padding: 10px 18px;">Clear</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Turfs List -->
+    <div class="turfs-grid" id="turfs-list">
+      <!-- Injected by turfs.js -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+      
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/turfs.js"></script>
+</body>
+</html>

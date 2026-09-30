@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Dashboard — TurfBook Lite</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/owner.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+  <!-- Global Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <!-- Dynamic Navbar -->
+    </div>
+  </header>
+
+  <main class="container" id="owner-dashboard-view">
+    <div class="dashboard-header">
+      <h1>Welcome back, <span id="owner-name">Owner</span></h1>
+      <p>Manage your listed turfs and view player bookings in one place.</p>
+    </div>
+
+    <!-- Metrics Cards -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">My Turfs</div>
+        <div class="stat-value" id="stat-turfs-count">0</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Total Bookings Received</div>
+        <div class="stat-value" id="stat-bookings-count">0</div>
+      </div>
+    </div>
+
+    <!-- My Turfs Section -->
+    <section id="my-turfs">
+      <div class="section-header">
+        <h2>My Listed Turfs</h2>
+        <a href="/add-turf.html" class="btn btn-primary btn-sm">+ Add New Turf</a>
+      </div>
+
+      <div id="owner-turfs-container" class="owner-turf-list">
+        <!-- Injected by owner.js -->
+      </div>
+    </section>
+
+    <!-- Recent Bookings Section -->
+    <section id="owner-bookings" style="margin-top: 40px;">
+      <div class="section-header">
+        <h2>Bookings Received</h2>
+      </div>
+
+      <div id="owner-bookings-container">
+        <!-- Injected by owner.js -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/owner.js"></script>
+</body>
+</html>
